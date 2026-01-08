@@ -1,12 +1,29 @@
 <script setup lang="ts">
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Pagination, Navigation } from 'swiper/modules'
+
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+
+const modules = [Pagination, Navigation]
+
 import Navbar from '~/layouts/Navbar.vue';
+
+const projectStore = useProjectStore()
+
+const route = useRoute()
+
+const project = computed(() =>
+    projectStore.getProjectById(route.params.id)
+)
 
 </script>
 
 <template>
     <Navbar>
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-            <div class="mt-20 items-center mb-5">
+            <div class="mt-20 items-center mb-10">
                 <div class="flex items-center text-2xl sm:text-3xl">
                     <p class="text-[#C778DD]">#</p>
                     <p>Project</p>
@@ -14,10 +31,50 @@ import Navbar from '~/layouts/Navbar.vue';
                 </div>
             </div>
 
-            <div class="w-full px-5">
-                <div class="text-xl sm:text-2xl"><p>Project : Aire</p></div>
-                <div class="text-xl sm:text-2xl"><p>Description : Aire</p></div>
+            <div class="w-full mb-10">
+                <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :pagination="{
+                    clickable: true,
+                }" :navigation="true" :modules="modules" class="mySwiper w-full">
+                    <swiper-slide v-for="image in project?.image"><img :src="image" alt=""></swiper-slide>
+                </swiper>
             </div>
+
+            <div class="w-full px-5">
+                <div class="text-[#C778DD] text-2xl font-bold sm:text-3xl flex">
+                    <p>{{ project?.name }}</p>
+                </div>
+                <div class="flex"><p>Live demo:</p><a :href="project?.livedemo">{{ project?.livedemo }}</a></div>
+                <div class="text-xl sm:text-2xl mt-10">
+                    <p>{{ project?.description }}</p>
+
+                    <p class="my-15">{{ project?.th_description }}</p>
+                </div>
+
+                <div class="text-xl sm:text-2xl font-bold mb-5 text-gray-500 underline">Features</div>
+                <div v-for="(items, category) in project?.features" :key="category" class="mb-6">
+                    <h3 class="text-xl sm:text-2xl font-semibold capitalize mb-2">
+                        {{ category }}
+                    </h3>
+
+                    <ul class="list-disc pl-5">
+                        <li v-for="(item, i) in items" :key="i">
+                            {{ item }}
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="text-xl sm:text-2xl font-bold mb-5 text-gray-500 underline">Challenges and Solutions</div>
+                <div class="w-full">
+                    <ul class="list-disc pl-5">
+                        <li v-for="c in project?.challenges">{{ c }}</li>
+                    </ul>
+                    <ul class="mt-15 list-disc pl-5">
+                        <li v-for="c in project?.th_challenges">{{ c }}</li>
+                    </ul>
+                </div>
+
+            </div>
+
 
         </div>
     </Navbar>

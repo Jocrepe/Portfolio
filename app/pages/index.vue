@@ -98,6 +98,9 @@ const copyEmail = async () => {
                     My goal is to grow into a professional full-stack developer who can deliver reliable and
                     maintainable systems.
                 </p>
+                <p class="mt-10 text-base sm:text-lg md:text-xl">
+                    This portfolio website is fully responsive and optimized for mobile, tablet, and desktop devices.
+                </p>
             </div>
 
             <!-- Skills Section -->
@@ -143,6 +146,7 @@ const copyEmail = async () => {
                         <p>Git</p>
                         <p>Figma</p>
                         <p>Postman</p>
+                        <p>Tailwind CSS (Fully responsive)</p>
                     </div>
                 </div>
 
