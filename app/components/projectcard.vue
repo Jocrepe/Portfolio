@@ -1,10 +1,19 @@
 <script setup>
-const projectStore = useProjectStore()
+import Fire from '~/assets/icon/fire.vue';
 
+const projectStore = useProjectStore()
+const isAire = projectStore.id === 'aire'
 </script>
 <template>
     <div class="grid mt-10 gap-15 md:grid-cols-2 lg:grid-cols-3">
-        <div v-for="project in projectStore.projects" class="border border-gray-300">
+        <div v-for="project in projectStore.projects" class="relative border border-gray-300">
+            <div v-if="project.id === 'aire'" class="absolute flex top-3 left-3 border border-gray-300 bg-gray-700 items-center gap-2 p-2 rounded-4xl">
+                <Fire></Fire>
+                <div>
+                    <p class="">Featured Project</p>
+                </div>
+
+            </div>
             <div class="w-full">
                 <img :src="project.image[5]" class="w-full h-70" alt="">
             </div>

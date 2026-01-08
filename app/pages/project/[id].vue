@@ -49,11 +49,9 @@ const project = computed(() =>
                 </div>
                 <div class="text-xl sm:text-2xl mt-10">
                     <p>{{ project?.description }}</p>
-
-                    <p class="my-15">{{ project?.th_description }}</p>
                 </div>
 
-                <div class="text-xl sm:text-2xl font-bold mb-5 text-gray-500 underline">Features</div>
+                <div class="text-xl sm:text-2xl font-bold mt-10 mb-5 text-gray-500 underline">Features</div>
                 <div v-for="(items, category) in project?.features" :key="category" class="mb-6">
                     <h3 class="text-xl sm:text-2xl font-semibold capitalize mb-2">
                         {{ category }}
