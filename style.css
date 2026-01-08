@@ -12,8 +12,8 @@
   background: linear-gradient(
     120deg,
     #020617, /* slate-950 */
-    #131d35, /* slate-900 */
-    #20509e  /* slate-800 */
+    #1e315c, /* slate-900 */
+    #336bc4  /* slate-800 */
   );
   background-size: 200% 200%;
   animation: gradientMove 8s ease-in-out infinite;

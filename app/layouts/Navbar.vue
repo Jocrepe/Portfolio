@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import github from '~/assets/icon/github.vue';
-import email from '~/assets/icon/email.vue';
 
 const mobileMenuOpen = ref(false)
 
@@ -35,10 +33,10 @@ const closeMenu = () => {
 
             <!-- Desktop Menu -->
             <div class="hidden lg:flex gap-8">
-                <NuxtLink to="#home"><button class="btn btn-ghost text-lg"><span class="text-[#C778DD]">#</span>home</button></NuxtLink>
-                <NuxtLink to="#project"><button class="btn btn-ghost text-lg"><span class="text-[#C778DD]">#</span>my-works</button></NuxtLink>
-                <NuxtLink to="#about"><button class="btn btn-ghost text-lg"><span class="text-[#C778DD]">#</span>about-me</button></NuxtLink>
-                <NuxtLink to="#contact"><button class="btn btn-ghost text-lg"><span class="text-[#C778DD]">#</span>contact</button></NuxtLink>
+                <NuxtLink to="/#home"><button class="btn btn-ghost text-lg"><span class="text-[#C778DD]">#</span>home</button></NuxtLink>
+                <NuxtLink to="/#project"><button class="btn btn-ghost text-lg"><span class="text-[#C778DD]">#</span>my-works</button></NuxtLink>
+                <NuxtLink to="/#about"><button class="btn btn-ghost text-lg"><span class="text-[#C778DD]">#</span>about-me</button></NuxtLink>
+                <NuxtLink to="/#contact"><button class="btn btn-ghost text-lg"><span class="text-[#C778DD]">#</span>contact</button></NuxtLink>
             </div>
         </nav>
 
