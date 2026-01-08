@@ -50,22 +50,22 @@ const closeMenu = () => {
         <div v-if="mobileMenuOpen" 
              class="lg:hidden fixed top-20 left-0 right-0 bg-black shadow-lg z-40 p-4">
             <div class="flex flex-col gap-2">
-                <NuxtLink to="#home" @click="closeMenu">
+                <NuxtLink to="/#home" @click="closeMenu">
                     <button class="btn btn-ghost w-full justify-start text-lg">
                         <span class="text-[#C778DD]">#</span>home
                     </button>
                 </NuxtLink>
-                <NuxtLink to="#project" @click="closeMenu">
+                <NuxtLink to="/#project" @click="closeMenu">
                     <button class="btn btn-ghost w-full justify-start text-lg">
                         <span class="text-[#C778DD]">#</span>my-works
                     </button>
                 </NuxtLink>
-                <NuxtLink to="#about" @click="closeMenu">
+                <NuxtLink to="/#about" @click="closeMenu">
                     <button class="btn btn-ghost w-full justify-start text-lg">
                         <span class="text-[#C778DD]">#</span>about-me
                     </button>
                 </NuxtLink>
-                <NuxtLink to="#contact" @click="closeMenu">
+                <NuxtLink to="/#contact" @click="closeMenu">
                     <button class="btn btn-ghost w-full justify-start text-lg">
                         <span class="text-[#C778DD]">#</span>contact
                     </button>

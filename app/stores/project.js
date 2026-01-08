@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import Github from '~/assets/icon/github.vue'
 
 export const useProjectStore = defineStore('project', {
   state: () => ({
@@ -8,9 +9,7 @@ export const useProjectStore = defineStore('project', {
             name
             : 'Aire Fullstack E-Commerce Platform',
             description 
-            : 'Aire is a full-stack e-commerce platform built to simulate a real-world online store, Including authentication, role-based access (admin/user), product management, and cart system.',
-            th_description 
-            : 'Aire คือเว็บ e-commerce ที่ผมออกแบบและพัฒนาตั้งแต่ backend ถึง frontend เพื่อจำลองระบบร้านค้าออนไลน์จริง',
+            : 'Aire คือโปรเจกต์ Fullstack E-Commerce ที่ผมออกแบบและพัฒนาตั้งแต่ Backend ถึง Frontend เพื่อจำลองระบบร้านค้าออนไลน์ในโลกจริง ครอบคลุมตั้งแต่ระบบผู้ใช้ การจัดการสินค้า ไปจนถึงระบบ Admin และการ Deploy ใช้งานจริง โปรเจกต์นี้มุ่งเน้นการเข้าใจการทำงานร่วมกันของ Frontend และ Backend รวมถึงการแก้ไขปัญหาที่เกิดขึ้นจริงใน Production environment ไม่ใช่เพียงแค่การทำ CRUD',
             features: {
                 authentication: [
                     'Login / Register / Logout',
@@ -34,11 +33,6 @@ export const useProjectStore = defineStore('project', {
                 ],
             },
             challenges : [
-                'Resolved an issue where cookies were not being sent in the production environment by properly configuring the secure and sameSite attributes for production use.',
-                'Designed a centralized error-handling system using middleware with a custom AppError class to standardize error responses and HTTP status codes across the entire application.',
-                'Implemented route guards and middleware to validate user roles from cookies, ensuring secure admin-only access and clear separation of user roles (Admin / User).'
-            ],
-            th_challenges : [
                 'แก้ไขปัญหา Cookie ไม่ถูกส่งเมื่อ Deploy ระบบจริง พบว่าต้องจัดการค่า secure และ sameSite ให้เหมาะสมกับ Production',
                 'ออกแบบระบบจัดการ Error แบบ Middleware โดยใช้ AppError เพื่อควบคุมรูปแบบ Error และ HTTP status code ให้เป็นมาตรฐานเดียวกันทั้งระบบ',
                 'ออกแบบ Route guard และ Middleware สำหรับเช็ค role ใน Cookie เพื่อควบคุมการเข้าถึงหน้า Admin และแยกบทบาทผู้ใช้ (Admin/User)อย่างชัดเจน'
@@ -52,7 +46,17 @@ export const useProjectStore = defineStore('project', {
                 '/project/aire7.png',
                 '/project/aire8.png',
             ],
-            livedemo : 'https://aire-nu.vercel.app/'
+            livedemo : 'https://aire-nu.vercel.app/',
+            Github : 'https://github.com/Jocrepe/Aire',
+            techstack : [
+                'Frontend: Vue, Pinia, Vue Router, TailwindCSS (No responsive yet)',
+                'Backend: Node.js, Express.js',
+                'Database: SQLite'
+            ],
+            other: [
+                'สามารถเข้าใช้งาน Admin Panel (Demo) ได้ที่ https://aire-nu.vercel.app/admin-login โดยใช้ข้อมูลเข้าสู่ระบบดังนี้:Email: aa , Password: aa',
+                'โปรเจกต์นี้ช่วยให้ผมเข้าใจการทำงานร่วมกันระหว่าง Frontend และ Backend มากขึ้นได้เรียนรู้การจัดการปัญหาที่เกิดขึ้นจริงในขั้นตอน Deploy และการออกแบบระบบที่มากกว่าการทำ CRUD ทั่วไป'
+            ]
         }
     ],
     loading: null,

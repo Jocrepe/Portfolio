@@ -22,7 +22,7 @@ const project = computed(() =>
 
 <template>
     <Navbar>
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mt-20 items-center mb-10">
                 <div class="flex items-center text-2xl sm:text-3xl">
                     <p class="text-[#C778DD]">#</p>
@@ -43,7 +43,10 @@ const project = computed(() =>
                 <div class="text-[#C778DD] text-2xl font-bold sm:text-3xl flex">
                     <p>{{ project?.name }}</p>
                 </div>
-                <div class="flex"><p>Live demo:</p><a :href="project?.livedemo">{{ project?.livedemo }}</a></div>
+                <div class="flex flex-col">
+                    <div><a :href="project?.livedemo">Live demo: {{ project?.livedemo }}</a></div>
+                    <div><a :href="project?.Github">Github: {{ project?.Github }}</a></div>
+                </div>
                 <div class="text-xl sm:text-2xl mt-10">
                     <p>{{ project?.description }}</p>
 
@@ -56,23 +59,32 @@ const project = computed(() =>
                         {{ category }}
                     </h3>
 
-                    <ul class="list-disc pl-5">
+                    <ul class="list-disc pl-5 text-xl">
                         <li v-for="(item, i) in items" :key="i">
                             {{ item }}
                         </li>
                     </ul>
                 </div>
 
-                <div class="text-xl sm:text-2xl font-bold mb-5 text-gray-500 underline">Challenges and Solutions</div>
+                <div class="text-xl sm:text-2xl font-bold mb-5 text-gray-500 underline mt-10">Challenges and Solutions</div>
                 <div class="w-full">
-                    <ul class="list-disc pl-5">
+                    <ul class="list-disc pl-5 text-xl">
                         <li v-for="c in project?.challenges">{{ c }}</li>
                     </ul>
-                    <ul class="mt-15 list-disc pl-5">
-                        <li v-for="c in project?.th_challenges">{{ c }}</li>
+                 
+                </div>
+
+                <div class="text-xl sm:text-2xl font-bold mb-5 text-gray-500 underline mt-10">Tech Stack</div>
+                <div>
+                    <ul class="list-disc pl-5 text-xl">
+                        <li v-for="i in project?.techstack">{{ i }}</li>
                     </ul>
                 </div>
 
+                <div class="text-xl sm:text-2xl mt-30">
+                    
+                    <div  v-for="other in project?.other" class="my-10"><p>{{ other }}</p></div>
+                </div>
             </div>
 
 
