@@ -11,8 +11,8 @@
 .bg-animated-gradient {
   background: linear-gradient(
     120deg,
-    #020617, /* slate-950 */
-    #1e315c, /* slate-900 */
+    #000000, /* slate-950 */
+    #19284b, /* slate-900 */
     #336bc4  /* slate-800 */
   );
   background-size: 200% 200%;
