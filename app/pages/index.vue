@@ -112,13 +112,13 @@ const copyEmail = async () => {
                 </div>
             </div>
 
-            <!-- Skills Grid -->
+            <!-- Skills Grid -->  
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 mt-8 md:mt-10">
                 <!-- Languages -->
                 <div class="border border-gray-300 text-center">
                     <div class="border-b border-gray-300 p-3 text-lg sm:text-xl font-semibold ">Languages</div>
                     <div class="text-base sm:text-lg md:text-xl p-4 space-y-2">
-                        <p>C#</p>
+                        <p>C# (OOP)</p>
                         <p>C</p>
                         <p>C++</p>
                         <p>Javascript</p>
