@@ -21,7 +21,7 @@ const isAire = projectStore.id === 'aire'
                 <p class="text-2xl">{{ project.name }}</p>
                 <p class="text-gray-400 mt-2 mb-5">{{ project.description }}</p>
                 <NuxtLink :to="`/project/${project.id}`">
-                    <button class="btn btn-soft btn-accent w-full">View Project</button>
+                    <button class="btn btn-primary w-full">View Project</button>
                 </NuxtLink>
             </div>
         </div>
