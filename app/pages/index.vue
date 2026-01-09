@@ -126,7 +126,7 @@ const copyEmail = async () => {
                         <p>C++</p>
                         <p>Javascript</p>
                         <p>Python</p>
-                        <p>HTML/CSS</p>
+                        <p>HTML, CSS</p>
                     </div>
                 </div>
 
@@ -145,7 +145,7 @@ const copyEmail = async () => {
                 <div class="border border-gray-300 text-center">
                     <div class="border-b border-gray-300 p-3 text-lg sm:text-xl font-semibold ">Tools</div>
                     <div class="text-base sm:text-lg md:text-xl p-4 space-y-2">
-                        <p>VS Code</p>
+                        <p>VSCode</p>
                         <p>Git</p>
                         <p>Figma</p>
                         <p>Postman</p>
@@ -165,7 +165,7 @@ const copyEmail = async () => {
 
                 <!-- Other -->
                 <div class="border border-gray-300 text-center sm:col-span-2 lg:col-span-1">
-                    <div class="border-b border-gray-300 p-3 text-lg sm:text-xl font-semibold ">Other</div>
+                    <div class="border-b border-gray-300 p-3 text-lg sm:text-xl font-semibold ">Others</div>
                     <div class="text-base sm:text-lg md:text-xl p-4 space-y-2">
                         <p>Node.js</p>
                         <p>Express.js</p>
