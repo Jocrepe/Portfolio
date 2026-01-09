@@ -2,7 +2,6 @@
 import Fire from '~/assets/icon/fire.vue';
 
 const projectStore = useProjectStore()
-const isAire = projectStore.id === 'aire'
 </script>
 <template>
     <div class="grid mt-10 gap-16 md:grid-cols-2 lg:grid-cols-3">
@@ -15,7 +14,7 @@ const isAire = projectStore.id === 'aire'
 
             </div>
             <div class="w-full">
-                <img :src="project.image[5]" class="w-full h-[300px]" alt="">
+                <img :src="project.main_img" class="w-full h-[300px]" alt="">
             </div>
             <div class="p-3">
                 <p class="text-2xl">{{ project.name }}</p>

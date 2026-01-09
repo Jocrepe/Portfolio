@@ -36,14 +36,15 @@ export const useProjectStore = defineStore('project', {
                     'ออกแบบระบบจัดการ Error แบบ Middleware โดยใช้ AppError เพื่อควบคุมรูปแบบ Error และ HTTP status code ให้เป็นมาตรฐานเดียวกันทั้งระบบ',
                     'ออกแบบ Route guard และ Middleware สำหรับเช็ค role ใน Cookie เพื่อควบคุมการเข้าถึงหน้า Admin และแยกบทบาทผู้ใช้ (Admin/User)อย่างชัดเจน'
                 ],
+                main_img : '/project/Aire/aire2.png',
                 image: [
-                    '/project/aire.png',
-                    '/project/aire2.png',
-                    '/project/aire3.png',
-                    '/project/aire5.png',
-                    '/project/aire6.png',
-                    '/project/aire7.png',
-                    '/project/aire8.png',
+                    '/project/Aire/aire.png',
+                    '/project/Aire/aire2.png',
+                    '/project/Aire/aire3.png',
+                    '/project/Aire/aire5.png',
+                    '/project/Aire/aire6.png',
+                    '/project/Aire/aire7.png',
+                    '/project/Aire/aire8.png',
                 ],
                 livedemo: 'https://aire-nu.vercel.app/',
                 Github: 'https://github.com/Jocrepe/Aire',
@@ -60,7 +61,7 @@ export const useProjectStore = defineStore('project', {
             {
                 id: 'wonsuk',
                 name
-                    : 'Wonsuk-Website',
+                    : 'Wonsuk-Website Frontend Project',
                 description
                     : 'Aire คือโปรเจกต์ Fullstack E-Commerce ที่ผมออกแบบและพัฒนาตั้งแต่ Backend ถึง Frontend เพื่อจำลองระบบร้านค้าออนไลน์ในโลกจริง ครอบคลุมตั้งแต่ระบบผู้ใช้ การจัดการสินค้า ไปจนถึงระบบ Admin และการ Deploy ใช้งานจริง โปรเจกต์นี้มุ่งเน้นการเข้าใจการทำงานร่วมกันของ Frontend และ Backend รวมถึงการแก้ไขปัญหาที่เกิดขึ้นจริงใน Production environment ไม่ใช่เพียงแค่การทำ CRUD',
                 features: {
@@ -90,16 +91,11 @@ export const useProjectStore = defineStore('project', {
                     'ออกแบบระบบจัดการ Error แบบ Middleware โดยใช้ AppError เพื่อควบคุมรูปแบบ Error และ HTTP status code ให้เป็นมาตรฐานเดียวกันทั้งระบบ',
                     'ออกแบบ Route guard และ Middleware สำหรับเช็ค role ใน Cookie เพื่อควบคุมการเข้าถึงหน้า Admin และแยกบทบาทผู้ใช้ (Admin/User)อย่างชัดเจน'
                 ],
+                main_img : '/project/wonsuk/wonsuk1.png',
                 image: [
-                    '/project/aire.png',
-                    '/project/aire2.png',
-                    '/project/aire3.png',
-                    '/project/aire5.png',
-                    '/project/aire6.png',
-                    '/project/aire7.png',
-                    '/project/aire8.png',
+                    '/project/wonsuk/wonsuk1.png'
                 ],
-                livedemo: 'https://aire-nu.vercel.app/',
+                livedemo: 'https://wonsuk.netlify.app/',
                 Github: 'https://github.com/Jocrepe/Aire',
                 techstack: [
                     'Frontend: Vue, Pinia, Vue Router, TailwindCSS (No responsive yet)',

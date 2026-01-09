@@ -43,8 +43,8 @@ const project = computed(() =>
                 <div class="text-[#C778DD] text-2xl font-bold sm:text-3xl flex">
                     <p>{{ project?.name }}</p>
                 </div>
-                <div class="flex flex-col">
-                    <div><a :href="project?.livedemo">Live demo: {{ project?.livedemo }}</a></div>
+                <div class="flex flex-col p-10 ">
+                    <div class="mb-5"><a :href="project?.livedemo">Live demo: {{ project?.livedemo }}</a></div>
                     <div><a :href="project?.Github">Github: {{ project?.Github }}</a></div>
                 </div>
                 <div class="text-xl sm:text-2xl mt-10">
