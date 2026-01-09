@@ -21,7 +21,7 @@ const copyEmail = async () => {
             <div class="flex flex-col w-full items-center mt-10 md:mt-16 lg:mt-20">
                 <!-- Profile Image -->
                 <div>
-                    <img class="rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 object-cover"
+                    <img class="rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-58 lg:h-58 object-cover"
                         src="https://fastly.picsum.photos/id/264/200/300.jpg?hmac=WstI9vAV1F8_R_954p04hcid4meCHkzTSQYIZwtIYz0"
                         alt="Profile Picture">
                 </div>
@@ -68,7 +68,7 @@ const copyEmail = async () => {
                     <p>my-projects</p>
                     <div class="ml-3 sm:ml-5 mt-2 w-20 sm:w-32 md:w-48 border-t-2 border-[#C778DD]"></div>
                 </div>
-                <button class="btn btn-soft text-sm sm:text-base">See All →</button>
+                <button class="w-35 btn btn-soft text-sm">See All →</button>
             </div>
 
             <Projectcard></Projectcard>
