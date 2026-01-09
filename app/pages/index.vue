@@ -68,7 +68,7 @@ const copyEmail = async () => {
                     <p>my-projects</p>
                     <div class="ml-3 sm:ml-5 mt-2 w-20 sm:w-32 md:w-48 border-t-2 border-[#C778DD]"></div>
                 </div>
-                <button class="w-35 btn btn-soft text-sm">See All →</button>
+                <button class="px-6 py-2 btn btn-neutral text-sm whitespace-nowrap">See All →</button>
             </div>
 
             <Projectcard></Projectcard>

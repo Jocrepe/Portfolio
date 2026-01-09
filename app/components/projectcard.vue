@@ -5,7 +5,7 @@ const projectStore = useProjectStore()
 const isAire = projectStore.id === 'aire'
 </script>
 <template>
-    <div class="grid mt-10 gap-15 md:grid-cols-2 lg:grid-cols-3">
+    <div class="grid mt-10 gap-16 md:grid-cols-2 lg:grid-cols-3">
         <div v-for="project in projectStore.projects" class="relative border border-gray-300">
             <div v-if="project.id === 'aire'" class="absolute flex top-3 left-3 border border-gray-300 bg-gray-700 items-center gap-2 p-2 rounded-4xl">
                 <Fire></Fire>
@@ -15,13 +15,13 @@ const isAire = projectStore.id === 'aire'
 
             </div>
             <div class="w-full">
-                <img :src="project.image[5]" class="w-full h-70" alt="">
+                <img :src="project.image[5]" class="w-full h-[300px]" alt="">
             </div>
             <div class="p-3">
                 <p class="text-2xl">{{ project.name }}</p>
                 <p class="text-gray-400 mt-2 mb-5">{{ project.description }}</p>
                 <NuxtLink :to="`/project/${project.id}`">
-                    <button class="btn btn-soft btn-info w-full">View Project</button>
+                    <button class="btn btn-soft btn-accent w-full">View Project</button>
                 </NuxtLink>
             </div>
         </div>
