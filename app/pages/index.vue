@@ -35,7 +35,7 @@ const copyEmail = async () => {
                     </div>
 
                     <!-- Subtitle -->
-                    <div class="my-10 md:mt-6 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+                    <div class="my-5 text-lg sm:text-xl md:text-2xl lg:text-3xl">
                         <p>
                             Computer Engineering Student
                         </p>
