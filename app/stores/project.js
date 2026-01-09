@@ -78,7 +78,7 @@ export const useProjectStore = defineStore('project', {
                     ],
                 },
                 challenges: [
-                    'ออกแบบ Layout ให้สามารถปรับเปลี่ยนได้ดีในทุกขนาดหน้าจอ โดยไม่ทำให้ UI แตกหรือดูอึดอัด',
+                    'ออกแบบ Layout โดยไม่ทำให้ UI แตกหรือดูอึดอัด',
                 ],
                 main_img: '/project/wonsuk/wonsuk1.png',
                 image: [
