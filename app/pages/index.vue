@@ -15,13 +15,13 @@ const copyEmail = async () => {
     <div id="home"></div>
     <Navbar>
         <!-- Container ปรับขนาดตามหน้าจอ -->
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="w-full max-w-7xl mx-auto px-5 sm:px-6 lg:px-20">
             
             <!-- Hero Section -->
             <div class="flex flex-col w-full items-center mt-10 md:mt-16 lg:mt-20">
                 <!-- Profile Image -->
                 <div>
-                    <img class="rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-58 lg:h-58 object-cover"
+                    <img class="rounded-full w-40 h-40 lg:w-58 lg:h-58 object-cover"
                         src="https://fastly.picsum.photos/id/264/200/300.jpg?hmac=WstI9vAV1F8_R_954p04hcid4meCHkzTSQYIZwtIYz0"
                         alt="Profile Picture">
                 </div>
@@ -31,15 +31,18 @@ const copyEmail = async () => {
                     <!-- Title -->
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                         <p>Hi, I am</p>
-                        <p class="text-[#C778DD]">Krittapol Nammungkun</p>
+                        <p class="text-[#C778DD] ml-3">Krittapol Nammungkun</p>
                     </div>
 
                     <!-- Subtitle -->
-                    <div class="mt-4 md:mt-6">
-                        <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl">
-                            Computer Engineering Student & Junior Fullstack Developer.
+                    <div class="my-10 md:mt-6 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+                        <p>
+                            Computer Engineering Student
                         </p>
-                    </div>
+                        <p class="mt-3">
+                            Junior Fullstack Developer (Project-Based)
+                        </p>
+                  </div>
 
                     <!-- Description -->
                     <div class="mt-6 md:mt-8">
