@@ -48,10 +48,10 @@ const project = computed(() =>
                         class="cursor-pointer">
                         Live Demo: {{ project?.livedemo }}
                     </a>
-                    <a v-else :href="project?.livedemo.customer" class="flex flex-col gap-5">
-                        <p>Customer Page: {{ project?.livedemo.customer  }}</p>
-                        <p>Kitchen Page: {{ project?.livedemo.kitchen }}</p>
-                    </a>
+                    <div v-else class="flex flex-col gap-5">
+                        <a :href="project?.livedemo.customer"><p>Customer Page: {{ project?.livedemo.customer  }}</p></a>
+                        <a :href="project?.livedemo.kitchen"><p>Kitchen Page: {{ project?.livedemo.kitchen }}</p></a>
+                    </div>
 
                     <div><a :href="project?.Github">Github: {{ project?.Github }}</a></div>
                 </div>
