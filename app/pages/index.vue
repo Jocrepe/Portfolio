@@ -15,7 +15,7 @@ const copyEmail = async () => {
     <div id="home"></div>
     <Navbar>
         <!-- Container ปรับขนาดตามหน้าจอ -->
-        <div class="w-full max-w-7xl mx-auto px-5 sm:px-6 lg:px-20">
+        <div class="w-full max-w-7xl mx-auto px-8 sm:px-6 lg:px-20">
 
             <!-- Hero Section -->
             <div class="flex flex-col w-full items-center mt-10 md:mt-16 lg:mt-20">
@@ -73,7 +73,7 @@ const copyEmail = async () => {
                     <p>my-projects</p>
                     <div class="ml-3 sm:ml-5 mt-2 w-20 sm:w-32 md:w-48 border-t-2 border-[#C778DD]"></div>
                 </div>
-                <button class="px-6 py-2 btn btn-neutral text-sm whitespace-nowrap">See All →</button>
+                <!-- <button class="px-6 py-2 btn btn-neutral text-sm whitespace-nowrap">See All →</button> -->
             </div>
 
             <Projectcard></Projectcard>
@@ -88,9 +88,9 @@ const copyEmail = async () => {
             </div>
 
             <!-- About Content -->
-            <div class="mt-8 md:mt-10 max-w-4xl">
-                <p class="text-base sm:text-lg md:text-xl mb-4">Hello,</p>
-                <p class="text-base sm:text-lg md:text-xl mb-6">
+            <div class="mt-8 md:mt-10 px-5 text-center">
+                <p class="text-sm md:text-xl mb-4">Hello,</p>
+                <p class="text-sm md:text-xl mb-6">
                     I am a Computer Engineering student and a junior full-stack developer who enjoys
                     building real-world web applications.
                     I have experience developing both frontend and backend, including CRUD operations, authentication
@@ -187,7 +187,7 @@ const copyEmail = async () => {
 
             <!-- contact -->
              <div class="p-3 md:p-5 lg:p-8 flex flex-col gap-10">
-                <p class="text-base sm:text-lg md:text-xl">I am interested in Internship oppotunities. However if you have other request or question, don't hesitate to contact me</p>
+                <p class="text-base md:text-lg lg:text-xl">I am interested in Internship oppotunities. However if you have other request or question, don't hesitate to contact me</p>
                 <div class="text-base sm:text-lg md:text-xl flex flex-col gap-5">
                     <p>Email : Krittapolcrepe@outlook.com</p>
                     <p>Github : <a href="https://github.com/Jocrepe" class="cursor-pointer">https://github.com/Jocrepe</a></p>

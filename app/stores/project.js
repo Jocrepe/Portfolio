@@ -10,32 +10,35 @@ export const useProjectStore = defineStore('project', {
                 description
                     : 'Orderra คือ Web Application สำหรับสั่งอาหารและจัดการออเดอร์ภายในร้าน โดยผมพัฒนาแบบ Fullstack โดยในเวอร์ชั่นถัดไปมีแผนจะเพิ่ม WebSocket เพื่อรองรับการอัปเดตสถานะออเดอร์แบบ Real Time ระหว่างลูกค้าและครัว',
                 features: {
-                    authentication: [
-                        'Login / Register / Logout',
-                        'JWT + HttpOnly Cookies',
-                        'Role-based access control (Admin / User)',
+                    order: [
+                        'สร้าง แก้ไข และลบออเดอร์ (CRUD)',
+                        'จัดการสถานะออเดอร์แบบเป็นขั้นตอน'
                     ],
-                    ecommerce: [
-                        'Product listing and category management',
-                        'Product detail page',
-                        'Add to cart and quantity update',
+                    menu: [
+                        'เชื่อมโยงเมนูอาหารเข้ากับออเดอร์ผ่าน relational database'
                     ],
-                    admin: [
-                        'Admin-only access',
-                        'Product CRUD (Create / Read / Update / Delete)',
-                        'Image upload for products',
+                    database: [
+                        'ใช้ PostgreSQL เป็นฐานข้อมูลหลัก',
+                        'ออกแบบ schema แบบ relational',
+                        'เรียนรู้การย้ายข้อมูลจาก local database ไปยัง cloud production database (Render)'
                     ],
-                    deployment: [
-                        'Frontend deployed on Vercel',
-                        'Backend deployed on Render',
-                        'Handled cookie and CORS configuration for production',
+                    backendAPIs: [
+                        'พัฒนา REST API สำหรับเชื่อมต่อ Frontend',
+                        'จัดการ request/response',
+                        'ออกแบบ API ให้พร้อมใช้งานจริง'
                     ],
+                    deploymeny: [
+                        'Deploy ระบบ Backend และ Database บน cloud',
+                        'ตั้งค่า environment variables อย่างปลอดภัย',
+                        'เชื่อมต่อ Production Database จาก Service ภายนอก (pgAdmin4)',
+                        'ระบบพร้อมใช้งานจริง'
+                    ]
                 },
                 challenges: [
-                    'แก้ไขปัญหา Cookie ไม่ถูกส่งเมื่อ Deploy ระบบจริง พบว่าต้องจัดการค่า secure และ sameSite ให้เหมาะสมกับ Production',
-                    'ออกแบบระบบจัดการ Error แบบ Middleware โดยใช้ AppError เพื่อควบคุมรูปแบบ Error และ HTTP status code ให้เป็นมาตรฐานเดียวกันทั้งระบบ',
-                    'ออกแบบ Route guard และ Middleware สำหรับเช็ค role ใน Cookie เพื่อควบคุมการเข้าถึงหน้า Admin และแยกบทบาทผู้ใช้ (Admin/User)อย่างชัดเจน',
-                    'Refector backend folder stucture ใหม่ทั้งหมด'
+                    'เริ่มต้นพัฒนาด้วย local PostgreSQL พอถึงขั้นตอนการ Deploy ต้องย้ายทั้ง schema และ data ไปยัง cloud database (Render)',
+                    'จัดการความแตกต่างระหว่าง Development และ Production Environment',
+                    'ออกแบบ API ให้สอดคล้องกับ Database',
+                    'แก้ปัญหา CORS'
                 ],
                 main_img: '/project/Orderra/orderra1.png',
                 image: [
@@ -43,16 +46,18 @@ export const useProjectStore = defineStore('project', {
                     '/project/Orderra/orderra2.png',
                     '/project/Orderra/orderra3.png'
                 ],
-                livedemo: 'https://aire-nu.vercel.app/',
-                Github: 'https://github.com/Jocrepe/Aire',
+                livedemo: {
+                    customer: 'https://orderra.vercel.app/',
+                    kitchen: 'https://orderra.vercel.app/kitchen/'
+                },
+                Github: 'https://github.com/Jocrepe/Orderra',
                 techstack: [
-                    'Frontend: Vue, Pinia, Vue Router, TailwindCSS (No responsive yet)',
-                    'Backend: Node.js, Express.js',
-                    'Database: SQLite'
+                    'Frontend: Nuxt.js, Pinia, Router, Tailwindcss',
+                    'Backend: Node.js, Express.js , REST API, .env',
+                    'Database: PostgreSQL'
                 ],
                 other: [
-                    'สามารถเข้าใช้งาน Admin Panel (Demo) ได้ที่ https://aire-nu.vercel.app/admin-login โดยใช้ข้อมูลเข้าสู่ระบบดังนี้:Email: admin01@mail.com , Password: admin1234  ***ในมือถือยังเข้าหน้า admin ไม่ได้นะครับเพราะติดเรื่อง browser ในมือถือมันบล็อค third party cookie',
-                    'โปรเจกต์นี้ช่วยให้ผมเข้าใจการทำงานร่วมกันระหว่าง Frontend และ Backend มากขึ้นได้เรียนรู้การจัดการปัญหาที่เกิดขึ้นจริงในขั้นตอน Deploy และการออกแบบระบบที่มากกว่าการทำ CRUD ทั่วไป'
+                    'ในอนาคตมีแผน ใส่ Websocket เพื่อดูแบบ Real Time ครับ'
                 ]
             },
 

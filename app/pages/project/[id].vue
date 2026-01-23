@@ -6,7 +6,6 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-const modules = [Pagination, Navigation]
 
 import Navbar from '~/layouts/Navbar.vue';
 
@@ -34,7 +33,7 @@ const project = computed(() =>
             <div class="w-full mb-10">
                 <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :pagination="{
                     clickable: true,
-                }" :navigation="true" :modules="[Autoplay]" :autoplay="{ delay:2500 }" class="mySwiper w-full">
+                }" :navigation="true" :modules="[Pagination,Navigation,Autoplay]" :autoplay="{ delay: 2500 }" class="mySwiper w-full">
                     <swiper-slide v-for="image in project?.image"><img :src="image" alt=""></swiper-slide>
                 </swiper>
             </div>
@@ -43,45 +42,57 @@ const project = computed(() =>
                 <div class="text-[#C778DD] text-2xl font-bold sm:text-3xl flex">
                     <p>{{ project?.name }}</p>
                 </div>
-                <div class="flex flex-col p-10 ">
-                    <div class="mb-5"><a :href="project?.livedemo">Live demo: {{ project?.livedemo }}</a></div>
+                <div class="flex flex-col text-sm gap-5 mt-4">
+                    <!-- <div class="mb-5"><a :href="project?.livedemo">Live demo: {{ project?.livedemo }}</a></div> -->
+                    <a v-if="typeof project?.livedemo === 'string'" :href="project.livedemo" target="_blank"
+                        class="cursor-pointer">
+                        Live Demo: {{ project?.livedemo }}
+                    </a>
+                    <a v-else :href="project?.livedemo.customer" class="flex flex-col gap-5">
+                        <p>Customer Page: {{ project?.livedemo.customer  }}</p>
+                        <p>Kitchen Page: {{ project?.livedemo.kitchen }}</p>
+                    </a>
+
                     <div><a :href="project?.Github">Github: {{ project?.Github }}</a></div>
                 </div>
-                <div class="text-xl sm:text-2xl mt-10">
+                <div class="text-base md:text-xl lg:text-2xl mt-10">
                     <p>{{ project?.description }}</p>
                 </div>
 
                 <div class="text-xl sm:text-2xl font-bold mt-10 mb-5 text-gray-500 underline">Features</div>
                 <div v-for="(items, category) in project?.features" :key="category" class="mb-6">
-                    <h3 class="text-xl sm:text-2xl font-semibold capitalize mb-2">
+                    <h3 class="text-base md:text-xl lg:text-2xl font-semibold capitalize mb-2">
                         {{ category }}
                     </h3>
 
-                    <ul class="list-disc pl-5 text-xl">
+                    <ul class="list-disc pl-5 text-base md:text-xl lg:text-2xl">
                         <li v-for="(item, i) in items" :key="i">
                             {{ item }}
                         </li>
                     </ul>
                 </div>
 
-                <div class="text-xl sm:text-2xl font-bold mb-5 text-gray-500 underline mt-10">Challenges and Solutions</div>
+                <div class="text-base md:text-xl lg:text-2xl font-bold mb-5 text-gray-500 underline mt-10">Challenges and Solutions
+                </div>
                 <div class="w-full">
                     <ul class="list-disc pl-5 text-xl">
                         <li v-for="c in project?.challenges">{{ c }}</li>
                     </ul>
-                 
+
                 </div>
 
                 <div class="text-xl sm:text-2xl font-bold mb-5 text-gray-500 underline mt-10">Tech Stack</div>
                 <div>
-                    <ul class="list-disc pl-5 text-xl">
+                    <ul class="list-disc pl-5 text-base md:text-xl lg:text-2xl">
                         <li v-for="i in project?.techstack">{{ i }}</li>
                     </ul>
                 </div>
 
-                <div class="text-xl sm:text-2xl mt-30">
-                    
-                    <div  v-for="other in project?.other" class="my-10"><p>{{ other }}</p></div>
+                <div class="text-base md:text-xl lg:text-2xl mt-30">
+
+                    <div v-for="other in project?.other" class="my-10">
+                        <p>{{ other }}</p>
+                    </div>
                 </div>
             </div>
 
