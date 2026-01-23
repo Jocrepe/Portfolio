@@ -75,7 +75,7 @@ const project = computed(() =>
                 <div class="text-base md:text-xl lg:text-2xl font-bold mb-5 text-gray-500 underline mt-10">Challenges and Solutions
                 </div>
                 <div class="w-full">
-                    <ul class="list-disc pl-5 text-xl">
+                    <ul class="list-disc pl-5 text-base md:text-xl lg:text-2xl">
                         <li v-for="c in project?.challenges">{{ c }}</li>
                     </ul>
 
