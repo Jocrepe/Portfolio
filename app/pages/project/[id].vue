@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Pagination, Navigation } from 'swiper/modules'
+import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -34,7 +34,7 @@ const project = computed(() =>
             <div class="w-full mb-10">
                 <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :pagination="{
                     clickable: true,
-                }" :navigation="true" :modules="modules" class="mySwiper w-full">
+                }" :navigation="true" :modules="[Autoplay]" :autoplay="{ delay:2500 }" class="mySwiper w-full">
                     <swiper-slide v-for="image in project?.image"><img :src="image" alt=""></swiper-slide>
                 </swiper>
             </div>

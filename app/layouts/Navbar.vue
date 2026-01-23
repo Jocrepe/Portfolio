@@ -10,12 +10,27 @@ const toggleMenu = () => {
 const closeMenu = () => {
     mobileMenuOpen.value = false
 }
+const scrollToSection = (id: string) => {
+    closeMenu() 
+
+    const element = document.getElementById(id)
+    if (element) {
+        const navbarHeight = 80 
+        const elementPosition = element.offsetTop - navbarHeight
+
+        window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+        })
+    }
+}
 </script>
 
 <template>
     <div>
         <!-- Navbar -->
-        <nav class="h-20 w-full flex items-center justify-between px-4 md:px-8 lg:justify-center sticky top-0 backdrop-blur-sm z-50">
+        <nav
+            class="h-20 w-full flex items-center justify-between px-4 md:px-8 lg:justify-center sticky top-0 backdrop-blur-sm z-50">
             <!-- Logo (แสดงใน mobile) -->
             <div class="text-xl font-bold lg:hidden">
                 <span class="text-[#C778DD]">Port</span>folio
@@ -24,38 +39,42 @@ const closeMenu = () => {
             <!-- Hamburger Menu (mobile) -->
             <button @click="toggleMenu" class="lg:hidden btn btn-ghost btn-square">
                 <svg v-if="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
                 <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
 
             <!-- Desktop Menu -->
             <div class="hidden lg:flex gap-8">
-                <NuxtLink to="/#home"><button class="btn btn-ghost text-lg"><span class="text-[#C778DD]">#</span>home</button></NuxtLink>
-                <NuxtLink to="/#project"><button class="btn btn-ghost text-lg"><span class="text-[#C778DD]">#</span>my-works</button></NuxtLink>
-                <NuxtLink to="/#about"><button class="btn btn-ghost text-lg"><span class="text-[#C778DD]">#</span>about-me</button></NuxtLink>
-                <NuxtLink to="/#contact"><button class="btn btn-ghost text-lg"><span class="text-[#C778DD]">#</span>contact</button></NuxtLink>
+                <NuxtLink to="/#home"><button class="btn btn-ghost text-lg"><span
+                            class="text-[#C778DD]">#</span>home</button></NuxtLink>
+                <button @click="scrollToSection('projects')" class="btn btn-ghost text-lg">
+                    <span class="text-[#C778DD]">#</span>my-works
+                </button>
+                <button @click="scrollToSection('about')" class="btn btn-ghost text-lg">
+                   <span class="text-[#C778DD]">#</span>about-me
+                </button>
+                <button @click="scrollToSection('contact')" class="btn btn-ghost text-lg">
+                   <span class="text-[#C778DD]">#</span>contact
+                </button>
             </div>
         </nav>
 
         <!-- Mobile Menu Overlay -->
-        <div v-if="mobileMenuOpen" 
-             class="lg:hidden fixed inset-0 bg-black/50 z-40" 
-             @click="closeMenu">
+        <div v-if="mobileMenuOpen" class="lg:hidden fixed inset-0 bg-black/50 z-40" @click="closeMenu">
         </div>
 
         <!-- Mobile Menu -->
-        <div v-if="mobileMenuOpen" 
-             class="lg:hidden fixed top-20 left-0 right-0 bg-black shadow-lg z-40 p-4">
+        <div v-if="mobileMenuOpen" class="lg:hidden fixed top-20 left-0 right-0 bg-black shadow-lg z-40 p-4">
             <div class="flex flex-col gap-2">
                 <NuxtLink to="/#home" @click="closeMenu">
                     <button class="btn btn-ghost w-full justify-start text-lg">
                         <span class="text-[#C778DD]">#</span>home
                     </button>
                 </NuxtLink>
-                <NuxtLink to="/#project" @click="closeMenu">
+                <NuxtLink to="/#projects" @click="closeMenu">
                     <button class="btn btn-ghost w-full justify-start text-lg">
                         <span class="text-[#C778DD]">#</span>my-works
                     </button>

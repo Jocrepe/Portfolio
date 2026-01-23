@@ -25,3 +25,7 @@
   100% { background-position: 0% 50%; }
 }
 
+#home,#projects,#about,#contact {
+  scroll-margin-top: 150px;
+}
+

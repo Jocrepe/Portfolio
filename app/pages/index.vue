@@ -6,8 +6,8 @@ import github from '~/assets/icon/github.vue';
 const Email = 'krittapolcrepe@outlook.com'
 
 const copyEmail = async () => {
-  await navigator.clipboard.writeText(Email)
-  alert('Email copied!')
+    await navigator.clipboard.writeText(Email)
+    alert('Email copied!')
 }
 </script>
 
@@ -16,7 +16,7 @@ const copyEmail = async () => {
     <Navbar>
         <!-- Container ปรับขนาดตามหน้าจอ -->
         <div class="w-full max-w-7xl mx-auto px-5 sm:px-6 lg:px-20">
-            
+
             <!-- Hero Section -->
             <div class="flex flex-col w-full items-center mt-10 md:mt-16 lg:mt-20">
                 <!-- Profile Image -->
@@ -29,7 +29,8 @@ const copyEmail = async () => {
                 <!-- Text Content -->
                 <div class="text-center mt-8 md:mt-12 lg:mt-16 px-4">
                     <!-- Title -->
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                    <div
+                        class="flex flex-col sm:flex-row items-center justify-center gap-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                         <p>Hi, I am</p>
                         <p class="text-[#C778DD] ml-3">Krittapol Nammungkun</p>
                     </div>
@@ -42,7 +43,7 @@ const copyEmail = async () => {
                         <p class="mt-3">
                             Junior Fullstack Developer (Project-Based)
                         </p>
-                  </div>
+                    </div>
 
                     <!-- Description -->
                     <div class="mt-6 md:mt-8">
@@ -65,7 +66,8 @@ const copyEmail = async () => {
             </div>
 
             <!-- Projects Section -->
-            <div class="mt-16 md:mt-24 lg:mt-32 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4" id="project">
+            <div class="mt-16 md:mt-24 lg:mt-32 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"
+                id="projects">
                 <div class="flex items-center text-2xl sm:text-3xl">
                     <p class="text-[#C778DD]">#</p>
                     <p>my-projects</p>
@@ -115,8 +117,9 @@ const copyEmail = async () => {
                 </div>
             </div>
 
-            <!-- Skills Grid -->  
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 mt-8 md:mt-10">
+            <!-- Skills Grid -->
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 mt-8 md:mt-10">
                 <!-- Languages -->
                 <div class="border border-gray-300 text-center">
                     <div class="border-b border-gray-300 p-3 text-lg sm:text-xl font-semibold ">Languages</div>
@@ -134,7 +137,7 @@ const copyEmail = async () => {
                 <div class="border border-gray-300 text-center">
                     <div class="border-b border-gray-300 p-3 text-lg sm:text-xl font-semibold ">Database</div>
                     <div class="text-base sm:text-lg md:text-xl p-4 space-y-2">
-                        <p>SQL</p>
+                        <p>PostgreSQL</p>
                         <p>MySQL</p>
                         <p>MongoDB</p>
                         <p>SQLite</p>
@@ -159,7 +162,7 @@ const copyEmail = async () => {
                     <div class="text-base sm:text-lg md:text-xl p-4 space-y-2">
                         <p>Vue.js</p>
                         <p>Nuxt.js</p>
-                        <p>React.js<br/>(Learning)</p>
+                        <p>React.js</p>
                     </div>
                 </div>
 
@@ -169,6 +172,28 @@ const copyEmail = async () => {
                     <div class="text-base sm:text-lg md:text-xl p-4 space-y-2">
                         <p>Node.js</p>
                         <p>Express.js</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact section-->
+            <div class="mt-16 md:mt-24 lg:mt-32 flex items-center" id="contact">
+                <div class="flex items-center text-2xl sm:text-3xl">
+                    <p class="text-[#C778DD]">#</p>
+                    <p>Contact Me</p>
+                    <div class="ml-3 sm:ml-5 mt-2 w-20 sm:w-32 md:w-48 border-t-2 border-[#C778DD]"></div>
+                </div>
+            </div>
+
+            <!-- contact -->
+             <div class="p-3 md:p-5 lg:p-8 flex flex-col gap-10">
+                <p class="text-base sm:text-lg md:text-xl">I am interested in Internship oppotunities. However if you have other request or question, don't hesitate to contact me</p>
+                <div class="text-base sm:text-lg md:text-xl flex flex-col gap-5">
+                    <p>Email : Krittapolcrepe@outlook.com</p>
+                    <p>Github : <a href="https://github.com/Jocrepe" class="cursor-pointer">https://github.com/Jocrepe</a></p>
+                    <div class="flex gap-4 mt-5">
+                        <p>Line:</p>
+                        <img src="/contact/LineQR.jpg" alt="" class="w-40">
                     </div>
                 </div>
             </div>
