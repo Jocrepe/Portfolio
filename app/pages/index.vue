@@ -3,7 +3,7 @@ import Navbar from '~/layouts/Navbar.vue';
 import email from '~/assets/icon/email.vue'
 import github from '~/assets/icon/github.vue';
 
-const Email = 'krittapolcrepe@outlook.com'
+const Email = 'krittapol.na@gmail.com'
 
 const copyEmail = async () => {
     await navigator.clipboard.writeText(Email)
@@ -112,7 +112,7 @@ const copyEmail = async () => {
             <div class="mt-16 md:mt-24 lg:mt-32 flex items-center">
                 <div class="flex items-center text-2xl sm:text-3xl">
                     <p class="text-[#C778DD]">#</p>
-                    <p>Tech/Skills</p>
+                    <p>Technical Skills</p>
                     <div class="ml-3 sm:ml-5 mt-2 w-20 sm:w-32 md:w-48 border-t-2 border-[#C778DD]"></div>
                 </div>
             </div>
@@ -124,22 +124,20 @@ const copyEmail = async () => {
                 <div class="border border-gray-300 text-center">
                     <div class="border-b border-gray-300 p-3 text-lg sm:text-xl font-semibold ">Languages</div>
                     <div class="text-base sm:text-lg md:text-xl p-4 space-y-2">
-                        <p>C# (OOP)</p>
                         <p>C</p>
+                        <p>C#</p>
                         <p>C++</p>
                         <p>Javascript</p>
                         <p>Python</p>
-                        <p>HTML, CSS</p>
                     </div>
                 </div>
 
                 <!-- Database -->
                 <div class="border border-gray-300 text-center">
-                    <div class="border-b border-gray-300 p-3 text-lg sm:text-xl font-semibold ">Database</div>
+                    <div class="border-b border-gray-300 p-3 text-lg sm:text-xl font-semibold ">Databases</div>
                     <div class="text-base sm:text-lg md:text-xl p-4 space-y-2">
                         <p>PostgreSQL</p>
                         <p>MySQL</p>
-                        <p>MongoDB</p>
                         <p>SQLite</p>
                     </div>
                 </div>
@@ -148,11 +146,10 @@ const copyEmail = async () => {
                 <div class="border border-gray-300 text-center">
                     <div class="border-b border-gray-300 p-3 text-lg sm:text-xl font-semibold ">Tools</div>
                     <div class="text-base sm:text-lg md:text-xl p-4 space-y-2">
-                        <p>VSCode</p>
                         <p>Git</p>
+                        <p>Github</p>
                         <p>Figma</p>
                         <p>Postman</p>
-                        <p>Tailwind CSS (Fully responsive)</p>
                     </div>
                 </div>
 
@@ -172,6 +169,7 @@ const copyEmail = async () => {
                     <div class="text-base sm:text-lg md:text-xl p-4 space-y-2">
                         <p>Node.js</p>
                         <p>Express.js</p>
+                        <p>TailwindCSS (Fully responsive)</p>
                     </div>
                 </div>
             </div>
@@ -189,7 +187,7 @@ const copyEmail = async () => {
              <div class="p-3 md:p-5 lg:p-8 flex flex-col gap-10">
                 <p class="text-base md:text-lg lg:text-xl">I am interested in Internship oppotunities. However if you have other request or question, don't hesitate to contact me</p>
                 <div class="text-base sm:text-lg md:text-xl flex flex-col gap-5">
-                    <p>Email : Krittapolcrepe@outlook.com</p>
+                    <p>Email : krittapol.na@gmail.com</p>
                     <p>Github : <a href="https://github.com/Jocrepe" class="cursor-pointer">https://github.com/Jocrepe</a></p>
                     <div class="flex gap-4 mt-5">
                         <p>Line:</p>
