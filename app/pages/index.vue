@@ -22,7 +22,7 @@ const copyEmail = async () => {
                 <!-- Profile Image -->
                 <div>
                     <img class="rounded-full w-40 h-40 lg:w-58 lg:h-58 object-cover"
-                        src="https://fastly.picsum.photos/id/264/200/300.jpg?hmac=WstI9vAV1F8_R_954p04hcid4meCHkzTSQYIZwtIYz0"
+                        src="/profileImg.jpg"
                         alt="Profile Picture">
                 </div>
 
