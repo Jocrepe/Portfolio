@@ -20,22 +20,21 @@ export const useProjectStore = defineStore('project', {
                     database: [
                         'ใช้ PostgreSQL เป็นฐานข้อมูลหลัก',
                         'ออกแบบ schema แบบ relational',
-                        'เรียนรู้การย้ายข้อมูลจาก local database ไปยัง cloud production database (Render)'
+                        'เรียนรู้การย้ายข้อมูลจาก local database ไปยัง cloud production database (Supabase)'
                     ],
                     backendAPIs: [
                         'พัฒนา REST API สำหรับเชื่อมต่อ Frontend',
                         'จัดการ request/response',
                         'ออกแบบ API ให้พร้อมใช้งานจริง'
                     ],
-                    deploymeny: [
+                    deployment: [
                         'Deploy ระบบ Backend และ Database บน cloud',
                         'ตั้งค่า environment variables อย่างปลอดภัย',
-                        'เชื่อมต่อ Production Database จาก Service ภายนอก (pgAdmin4)',
                         'ระบบพร้อมใช้งานจริง'
                     ]
                 },
                 challenges: [
-                    'เริ่มต้นพัฒนาด้วย local PostgreSQL พอถึงขั้นตอนการ Deploy ต้องย้ายทั้ง schema และ data ไปยัง cloud database (Render)',
+                    'เริ่มต้นพัฒนาด้วย local PostgreSQL พอถึงขั้นตอนการ Deploy ต้องย้ายทั้ง schema และ data ไปยัง cloud database (Supabase)',
                     'จัดการความแตกต่างระหว่าง Development และ Production Environment',
                     'ออกแบบ API ให้สอดคล้องกับ Database',
                     'แก้ปัญหา CORS'
@@ -57,14 +56,14 @@ export const useProjectStore = defineStore('project', {
                     'Database: PostgreSQL'
                 ],
                 other: [
-                    'ในอนาคตมีแผน ใส่ Websocket เพื่อดูแบบ Real Time ครับ'
+                    'ในอนาคตมีแผน ใส่ Websocket เพื่อให้ครัวสามารถดูออเดอร์แบบ Real Time ได้ครับ'
                 ]
             },
 
             {
                 id: 'aire',
                 name
-                    : 'Aire Fullstack E-Commerce Platform',
+                    : 'Aire E-Commerce Platform',
                 description
                     : 'Aire คือโปรเจกต์ Fullstack E-Commerce ที่ผมออกแบบและพัฒนาตั้งแต่ Backend ถึง Frontend เพื่อจำลองระบบร้านค้าออนไลน์ในโลกจริง ครอบคลุมตั้งแต่ระบบผู้ใช้ การจัดการสินค้า ไปจนถึงระบบ Admin และการ Deploy ใช้งานจริง โปรเจกต์นี้มุ่งเน้นการเข้าใจการทำงานร่วมกันของ Frontend และ Backend รวมถึงการแก้ไขปัญหาที่เกิดขึ้นจริงใน Production environment ไม่ใช่เพียงแค่การทำ CRUD',
                 features: {
@@ -119,6 +118,54 @@ export const useProjectStore = defineStore('project', {
             },
 
             {
+                id: 'HAMHANG',
+                name
+                    : 'HAMHANG -Product Website',
+                description
+                    : 'HAMHANG เป็นเว็บไซต์ที่ผมได้มีโอกาสรับงาน freelance กับเพื่อนๆโดยเริ่มต้น ออกแบบโครงสร้างหน้าเว็บ พัฒนาเว็บไซต์แสดงข้อมูล Product และใบรับรองคุณภาพ ไปจนถึงดูแลการ Deployment บน Cloudflare และผูกโดเมนให้พร้อมใช้งานจริง',
+                features: {
+                    ui: [
+                        'Modern and minimal UI design',
+                        '100% responsive across devices',
+                        'Animation',
+                        'Smooth hover effects and transitions',
+                    ],
+                    Analytics: [
+                        'CTR tracking for button interactions',
+                        'Data-ready for marketing analysis'
+                    ],
+                    Integration: ['Google Maps integration']
+                },
+                challenges: [
+                    'ออกแบบ โครงสร้างหน้าเว็บไซต์ทั้งหมด',
+                    'พัฒนาระบบ CTR เพื่อ Track อัตราการคลิกปุ่มต่างๆ โดยคำนวณออกมาเป็น % เพื่อให้ลูกค้าสามารถนำเอาข้อมูลไปวิเคราะห์ต่อได้',
+                    'ปรับแก้ตาม Feedback'
+                ],
+                main_img: '/project/Hamhang/hamhang1.png',
+                image: [
+                    '/project/Hamhang/hamhang1.png',
+                    '/project/Hamhang/hamhang2.png',
+                    '/project/Hamhang/hamhang3.png',
+                    '/project/Hamhang/hamhang4.png',
+                    '/project/Hamhang/hamhang5.png',
+                    '/project/Hamhang/hamhang6.png',
+                    '/project/Hamhang/hamhang7.png',
+                    
+                ],
+                livedemo: 'https://hamhang-demo.vercel.app/',
+                Github: '-',
+                techstack: [
+                    'Design: Figma',
+                    'Frontend: Nuxt.js, TailwindCSS, JavaScript',
+                    'Analytics: Google Analytics',
+                    'Deployment: Cloudflare',
+                ],
+                other: [
+                    'โปรเจกต์แสดงให้เห็นถึงทักษะในการทำงานจริงและปรับแก้งานตาม feedback ของลูกค้า',
+                ]
+            },
+
+            {
                 id: 'wonsuk',
                 name
                     : 'Wonsuk-Website Frontend Project',
@@ -158,6 +205,8 @@ export const useProjectStore = defineStore('project', {
                     'เป็นโปรเจกต์ที่ช่วยพัฒนาทักษะด้านการออกแบบหน้าเว็บให้ดูเป็นมืออาชีพและใช้งานได้จริง',
                 ]
             },
+
+            
         ],
         loading: null,
     }),

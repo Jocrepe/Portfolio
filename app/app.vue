@@ -1,6 +1,8 @@
 <template>
     <div class="min-h-screen bg-animated-gradient">
-        <NuxtRouteAnnouncer />
-        <NuxtPage />
+        <NuxtLayout>
+            <NuxtRouteAnnouncer />
+            <NuxtPage />
+        </NuxtLayout>
     </div>
 </template>

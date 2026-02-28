@@ -7,7 +7,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 
-import Navbar from '~/layouts/Navbar.vue';
+
 
 const projectStore = useProjectStore()
 
@@ -20,7 +20,7 @@ const project = computed(() =>
 </script>
 
 <template>
-    <Navbar>
+
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mt-20 items-center mb-10">
                 <div class="flex items-center text-2xl sm:text-3xl">
@@ -98,5 +98,5 @@ const project = computed(() =>
 
 
         </div>
-    </Navbar>
+
 </template>

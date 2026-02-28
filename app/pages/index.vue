@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Navbar from '~/layouts/Navbar.vue';
+
 import email from '~/assets/icon/email.vue'
 import github from '~/assets/icon/github.vue';
 
@@ -13,7 +13,7 @@ const copyEmail = async () => {
 
 <template>
     <div id="home"></div>
-    <Navbar>
+   
         <!-- Container ปรับขนาดตามหน้าจอ -->
         <div class="w-full max-w-7xl mx-auto px-8 sm:px-6 lg:px-20">
 
@@ -197,5 +197,5 @@ const copyEmail = async () => {
             </div>
 
         </div>
-    </Navbar>
+  
 </template>
