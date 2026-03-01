@@ -21,82 +21,97 @@ const project = computed(() =>
 
 <template>
 
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mt-20 items-center mb-10">
-                <div class="flex items-center text-2xl sm:text-3xl">
-                    <p class="text-[#C778DD]">#</p>
-                    <p>Project</p>
-                    <div class="ml-3 sm:ml-5 mt-2 w-20 sm:w-32 md:w-48 border-t-2 border-[#C778DD]"></div>
-                </div>
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mt-20 items-center mb-10">
+            <div class="flex items-center text-2xl sm:text-3xl">
+                <p class="text-[#C778DD]">#</p>
+                <p>Project</p>
+                <div class="ml-3 sm:ml-5 mt-2 w-20 sm:w-32 md:w-48 border-t-2 border-[#C778DD]"></div>
             </div>
-
-            <div class="w-full mb-10">
-                <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :pagination="{
-                    clickable: true,
-                }" :navigation="true" :modules="[Pagination,Navigation,Autoplay]" :autoplay="{ delay: 2500 }" class="mySwiper w-full">
-                    <swiper-slide v-for="image in project?.image"><img :src="image" alt=""></swiper-slide>
-                </swiper>
-            </div>
-
-            <div class="w-full px-5">
-                <div class="text-[#C778DD] text-2xl font-bold sm:text-3xl flex">
-                    <p>{{ project?.name }}</p>
-                </div>
-                <div class="flex flex-col text-sm gap-5 mt-4">
-                    <!-- <div class="mb-5"><a :href="project?.livedemo">Live demo: {{ project?.livedemo }}</a></div> -->
-                    <a v-if="typeof project?.livedemo === 'string'" :href="project.livedemo" target="_blank"
-                        class="cursor-pointer">
-                        Live Demo: {{ project?.livedemo }}
-                    </a>
-                    <div v-else class="flex flex-col gap-5">
-                        <a :href="project?.livedemo.customer"><p>Customer Page: {{ project?.livedemo.customer  }}</p></a>
-                        <a :href="project?.livedemo.kitchen"><p>Kitchen Page: {{ project?.livedemo.kitchen }}</p></a>
-                    </div>
-
-                    <div><a :href="project?.Github">Github: {{ project?.Github }}</a></div>
-                </div>
-                <div class="text-base md:text-xl lg:text-2xl mt-10">
-                    <p>{{ project?.description }}</p>
-                </div>
-
-                <div class="text-xl sm:text-2xl font-bold mt-10 mb-5 text-gray-500 underline">Features</div>
-                <div v-for="(items, category) in project?.features" :key="category" class="mb-6">
-                    <h3 class="text-base md:text-xl lg:text-2xl font-semibold capitalize mb-2">
-                        {{ category }}
-                    </h3>
-
-                    <ul class="list-disc pl-5 text-base md:text-xl lg:text-2xl">
-                        <li v-for="(item, i) in items" :key="i">
-                            {{ item }}
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="text-base md:text-xl lg:text-2xl font-bold mb-5 text-gray-500 underline mt-10">Challenges and Solutions
-                </div>
-                <div class="w-full">
-                    <ul class="list-disc pl-5 text-base md:text-xl lg:text-2xl">
-                        <li v-for="c in project?.challenges">{{ c }}</li>
-                    </ul>
-
-                </div>
-
-                <div class="text-xl sm:text-2xl font-bold mb-5 text-gray-500 underline mt-10">Tech Stack</div>
-                <div>
-                    <ul class="list-disc pl-5 text-base md:text-xl lg:text-2xl">
-                        <li v-for="i in project?.techstack">{{ i }}</li>
-                    </ul>
-                </div>
-
-                <div class="text-base md:text-xl lg:text-2xl mt-30">
-
-                    <div v-for="other in project?.other" class="my-10">
-                        <p>{{ other }}</p>
-                    </div>
-                </div>
-            </div>
-
-
         </div>
+
+        <div class="w-full mb-10">
+            <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :pagination="{
+                clickable: true,
+            }" :navigation="true" :modules="[Pagination, Navigation, Autoplay]" :autoplay="{ delay: 2500 }"
+                class="mySwiper w-full">
+                <swiper-slide v-for="image in project?.image"><img :src="image" alt=""></swiper-slide>
+            </swiper>
+        </div>
+
+        <div class="w-full px-5">
+            <div class="text-[#C778DD] text-2xl font-bold sm:text-3xl flex">
+                <p>{{ project?.name }}</p>
+            </div>
+            <div class="flex flex-col text-sm gap-5 mt-4">
+                <!-- <div class="mb-5"><a :href="project?.livedemo">Live demo: {{ project?.livedemo }}</a></div> -->
+                <a v-if="typeof project?.livedemo === 'string'" :href="project.livedemo" target="_blank"
+                    class="cursor-pointer">
+                    Live Demo: {{ project?.livedemo }}
+                </a>
+                <div v-else class="flex flex-col justify-between">
+                    <div class="flex flex-col items-center gap-2 my-15 justify-center">
+                        <p class="text-base">สามารถแสกนเพื่อทดลองใช้งานได้</p>
+                        <img src="/project/Orderra/orderra-qr.jpg" alt="" class="w-10 md:w-23 lg:w-33">
+                    </div>
+                    <div class="flex flex-col gap-5 text-sm">
+                        <a :href="project?.livedemo.customer">
+                            <p class="text-xs lg:text-base">Customer Page: {{ project?.livedemo.customer }}</p>
+                        </a>
+                        <a :href="project?.livedemo.kitchen">
+                            <p class="text-xs lg:text-base">Kitchen Page: {{ project?.livedemo.kitchen }}</p>
+                        </a>
+                        <a :href="project?.livedemo.cashier">
+                            <p class="text-xs lg:text-base">Cashier Page(POS): {{ project?.livedemo.kitchen }}</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div><a :href="project?.Github" class="text-xs lg:text-base">Github: {{ project?.Github }}</a></div>
+            </div>
+            <div class="text-base md:text-xl lg:text-2xl mt-10">
+                <p>{{ project?.description }}</p>
+            </div>
+
+            <div class="text-xl sm:text-2xl font-bold mt-10 mb-5 text-gray-500 underline">Features</div>
+            <div v-for="(items, category) in project?.features" :key="category" class="mb-6">
+                <h3 class="text-base md:text-xl lg:text-2xl font-semibold capitalize mb-2">
+                    {{ category }}
+                </h3>
+
+                <ul class="list-disc pl-5 text-base md:text-xl lg:text-2xl">
+                    <li v-for="(item, i) in items" :key="i">
+                        {{ item }}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="text-base md:text-xl lg:text-2xl font-bold mb-5 text-gray-500 underline mt-10">Challenges and
+                Solutions
+            </div>
+            <div class="w-full">
+                <ul class="list-disc pl-5 text-base md:text-xl lg:text-2xl">
+                    <li v-for="c in project?.challenges">{{ c }}</li>
+                </ul>
+
+            </div>
+
+            <div class="text-xl sm:text-2xl font-bold mb-5 text-gray-500 underline mt-10">Tech Stack</div>
+            <div>
+                <ul class="list-disc pl-5 text-base md:text-xl lg:text-2xl">
+                    <li v-for="i in project?.techstack">{{ i }}</li>
+                </ul>
+            </div>
+
+            <div class="text-base md:text-xl lg:text-2xl mt-30">
+
+                <div v-for="other in project?.other" class="my-10">
+                    <p>{{ other }}</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 
 </template>

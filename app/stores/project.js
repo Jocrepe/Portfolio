@@ -8,52 +8,62 @@ export const useProjectStore = defineStore('project', {
                 name
                     : 'Orderra Restaurant Ordering Web App',
                 description
-                    : 'Orderra คือ Web Application สำหรับสั่งอาหารและจัดการออเดอร์ภายในร้าน โดยผมพัฒนาแบบ Fullstack โดยในเวอร์ชั่นถัดไปมีแผนจะเพิ่ม WebSocket เพื่อรองรับการอัปเดตสถานะออเดอร์แบบ Real Time ระหว่างลูกค้าและครัว',
+                    : 'Orderra คือ Web Application สำหรับระบบสั่งอาหารและจัดการออเดอร์ภายในร้านอาหาร พัฒนาแบบ Fullstack ครอบคลุมตั้งแต่การออกแบบฐานข้อมูล การพัฒนา REST API ไปจนถึง Frontend Interface สำหรับลูกค้า ครัว และแคชเชียร์\n\nอัปเดต (3/1/2026): ทำการ Refactor life-cycle ของสถานะออเดอร์ใหม่ทั้งหมด และเพิ่มระบบ POS สำหรับพนักงานแคชเชียร์ สามารถดูโต๊ะที่รอชำระเงิน พิมพ์ใบเสร็จ และเปลี่ยนสถานะออเดอร์เป็น PAID ได้อย่างเป็นระบบ\n\nในเวอร์ชันถัดไปมีแผนพัฒนา WebSocket เพื่อรองรับการอัปเดตสถานะออเดอร์แบบ Real-Time ระหว่างลูกค้าและครัว',
                 features: {
                     order: [
                         'สร้าง แก้ไข และลบออเดอร์ (CRUD)',
-                        'จัดการสถานะออเดอร์แบบเป็นขั้นตอน'
+                        'ออกแบบและจัดการสถานะออเดอร์แบบมี Life-cycle (เช่น Pending → Preparing → Served → Paid)'
                     ],
                     menu: [
-                        'เชื่อมโยงเมนูอาหารเข้ากับออเดอร์ผ่าน relational database'
+                        'เชื่อมโยงเมนูอาหารเข้ากับออเดอร์ผ่าน Relational Database',
+                        'จัดการความสัมพันธ์ข้อมูลแบบ One-to-Many'
                     ],
                     database: [
                         'ใช้ PostgreSQL เป็นฐานข้อมูลหลัก',
-                        'ออกแบบ schema แบบ relational',
-                        'เรียนรู้การย้ายข้อมูลจาก local database ไปยัง cloud production database (Supabase)'
+                        'ออกแบบ Schema แบบ Relational พร้อม Foreign Key',
+                        'ย้ายข้อมูลจาก Local Database ไปยัง Cloud Production Database (Supabase)'
                     ],
                     backendAPIs: [
-                        'พัฒนา REST API สำหรับเชื่อมต่อ Frontend',
-                        'จัดการ request/response',
-                        'ออกแบบ API ให้พร้อมใช้งานจริง'
+                        'พัฒนา REST API ด้วย Node.js และ Express.js',
+                        'จัดการ Request/Response และ Error Handling',
+                        'ออกแบบ API ให้รองรับการใช้งานจริงใน Production'
                     ],
                     deployment: [
-                        'Deploy ระบบ Backend และ Database บน cloud',
-                        'ตั้งค่า environment variables อย่างปลอดภัย',
-                        'ระบบพร้อมใช้งานจริง'
+                        'Deploy Backend และ Database บน Cloud',
+                        'จัดการ Environment Variables อย่างปลอดภัย',
+                        'แยก Development และ Production Environment อย่างชัดเจน'
+                    ],
+                    payment: [
+                        'พัฒนาระบบ POS สำหรับแคชเชียร์',
+                        'แสดงโต๊ะที่รอชำระเงิน',
+                        'พิมพ์ใบเสร็จ',
+                        'อัปเดตสถานะออเดอร์เป็น PAID'
                     ]
                 },
                 challenges: [
-                    'เริ่มต้นพัฒนาด้วย local PostgreSQL พอถึงขั้นตอนการ Deploy ต้องย้ายทั้ง schema และ data ไปยัง cloud database (Supabase)',
+                    'Migration ฐานข้อมูลจาก Local PostgreSQL ไปยัง Supabase โดยคง Schema และ Data ให้สมบูรณ์',
                     'จัดการความแตกต่างระหว่าง Development และ Production Environment',
-                    'ออกแบบ API ให้สอดคล้องกับ Database',
-                    'แก้ปัญหา CORS'
+                    'ออกแบบ API ให้สอดคล้องกับโครงสร้าง Database',
+                    'แก้ปัญหา CORS ระหว่าง Frontend และ Backend'
                 ],
                 main_img: '/project/Orderra/orderra1.png',
                 image: [
                     '/project/Orderra/orderra1.png',
                     '/project/Orderra/orderra2.png',
-                    '/project/Orderra/orderra3.png'
+                    '/project/Orderra/orderra3.png',
+                    '/project/Orderra/orderra4.png'
                 ],
                 livedemo: {
                     customer: 'https://orderra.vercel.app/',
-                    kitchen: 'https://orderra.vercel.app/kitchen/'
+                    kitchen: 'https://orderra.vercel.app/kitchen/',
+                    cashier: 'https://orderra.vercel.app/cashier/'
                 },
                 Github: 'https://github.com/Jocrepe/Orderra',
                 techstack: [
-                    'Frontend: Nuxt.js, Pinia, Router, Tailwindcss',
-                    'Backend: Node.js, Express.js , REST API, .env',
-                    'Database: PostgreSQL'
+                    'Frontend: Nuxt.js, Pinia, Vue Router, Tailwind CSS',
+                    'Backend: Node.js, Express.js, REST API',
+                    'Database: PostgreSQL',
+                    'Deployment: Vercel, Supabase'
                 ],
                 other: [
                     'ในอนาคตมีแผน ใส่ Websocket เพื่อให้ครัวสามารถดูออเดอร์แบบ Real Time ได้ครับ'
@@ -150,7 +160,7 @@ export const useProjectStore = defineStore('project', {
                     '/project/Hamhang/hamhang5.png',
                     '/project/Hamhang/hamhang6.png',
                     '/project/Hamhang/hamhang7.png',
-                    
+
                 ],
                 livedemo: 'https://hamhang-demo.vercel.app/',
                 Github: '-',
@@ -206,7 +216,7 @@ export const useProjectStore = defineStore('project', {
                 ]
             },
 
-            
+
         ],
         loading: null,
     }),
