@@ -6,13 +6,13 @@ export const useProjectStore = defineStore('project', {
             {
                 id: 'orderra',
                 name
-                    : 'Orderra Restaurant Ordering Web App',
+                    : 'Orderra - Cloud-Based POS & Order Management System',
                 description
-                    : 'Orderra คือ Web Application สำหรับระบบสั่งอาหารและจัดการออเดอร์ภายในร้านอาหาร พัฒนาแบบ Fullstack ครอบคลุมตั้งแต่การออกแบบฐานข้อมูล การพัฒนา REST API ไปจนถึง Frontend Interface สำหรับลูกค้า ครัว และแคชเชียร์\n\nอัปเดต (3/1/2026): ทำการ Refactor life-cycle ของสถานะออเดอร์ใหม่ทั้งหมด และเพิ่มระบบ POS สำหรับพนักงานแคชเชียร์ สามารถดูโต๊ะที่รอชำระเงิน พิมพ์ใบเสร็จ และเปลี่ยนสถานะออเดอร์เป็น PAID ได้อย่างเป็นระบบ\n\nในเวอร์ชันถัดไปมีแผนพัฒนา WebSocket เพื่อรองรับการอัปเดตสถานะออเดอร์แบบ Real-Time ระหว่างลูกค้าและครัว',
+                    : 'Orderra เป็น Web Application สำหรับบริหารจัดการออเดอร์และการชำระเงินภายในร้านอาหาร ออกแบบในลักษณะ Cloud-Based System รองรับผู้ใช้หลายบทบาท ได้แก่ ลูกค้า (Customer), ครัว (Kitchen), และแคชเชียร์ (POS) โดยมีการกำหนดโครงสร้าง Life-cycle ของสถานะออเดอร์อย่างชัดเจน ตั้งแต่การสร้างออเดอร์จนถึงการชำระเงินเสร็จสมบูรณ์ ระบบพัฒนาในรูปแบบ Full-Stack Architecture โดยแยกส่วนการทำงานระหว่าง Frontend, Backend API และ Database บน Cloud แยกกันอย่างชัดเจน ในเวอร์ชั่นล่าสุดได้มีการ Refactor Life-cycle ของออเดอร์ใหม่เพื่อให้สอดคล้องกับการใช้งานจริงในร้านอาหาร และพัฒนาโมดูล POS สำหรับแคชเชียร์ เพื่อจัดการโต๊ะที่รอาการชำระเงิน ออกใบเสร็จ และอัปเดตสถานะออเดอร์เป็น PAID อย่างเป็นระบบ',
                 features: {
                     order: [
-                        'สร้าง แก้ไข และลบออเดอร์ (CRUD)',
-                        'ออกแบบและจัดการสถานะออเดอร์แบบมี Life-cycle (เช่น Pending → Preparing → Served → Paid)'
+                        'สร้างและลบออเดอร์',
+                        'ออกแบบและจัดการสถานะออเดอร์แบบมี Life-cycle (Pending → Preparing → Paid)'
                     ],
                     menu: [
                         'เชื่อมโยงเมนูอาหารเข้ากับออเดอร์ผ่าน Relational Database',

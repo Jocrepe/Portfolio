@@ -2,6 +2,10 @@
 
 import email from '~/assets/icon/email.vue'
 import github from '~/assets/icon/github.vue';
+import Loading from '~/components/loading.vue';
+import { usePageLoading } from '~/composable/useLoading';
+
+const {loading, show, done} = usePageLoading()
 
 const Email = 'krittapol.na@gmail.com'
 
@@ -9,9 +13,14 @@ const copyEmail = async () => {
     await navigator.clipboard.writeText(Email)
     alert('Email copied!')
 }
+
+onMounted(() => {
+    done()
+})
 </script>
 
 <template>
+    <Loading  v-if="loading"/>
     <div id="home"></div>
    
         <!-- Container ปรับขนาดตามหน้าจอ -->
@@ -20,7 +29,7 @@ const copyEmail = async () => {
             <!-- Hero Section -->
             <div class="flex flex-col w-full items-center mt-10 md:mt-16 lg:mt-20">
                 <!-- Profile Image -->
-                <div>
+                <div :class="['transition-all duration-1000 delay-1000', show ? 'opacity-100 translate-y-0':'opacity-0 translate-y-[-200%]']">
                     <img class="rounded-full w-40 h-40 lg:w-58 lg:h-58 object-cover"
                         src="/profileImg.jpg"
                         alt="Profile Picture">
@@ -29,14 +38,14 @@ const copyEmail = async () => {
                 <!-- Text Content -->
                 <div class="text-center mt-8 md:mt-12 lg:mt-16 px-4">
                     <!-- Title -->
-                    <div
+                    <div :class="['transition-all duration-1000 delay-600', show ? 'opacity-100 translate-y-0':'opacity-0 translate-y-[-200%]']"
                         class="flex flex-col sm:flex-row items-center justify-center gap-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                         <p>Hi, I am</p>
                         <p class="text-[#C778DD] ml-3">Krittapol Nammungkun</p>
                     </div>
 
                     <!-- Subtitle -->
-                    <div class="my-5 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+                    <div class="my-5 text-lg sm:text-xl md:text-2xl lg:text-3xl" :class="['transition-all duration-1000 delay-400', show ? 'opacity-100 translate-x-0':'opacity-0 translate-x-[-200%]']">
                         <p>
                             Computer Engineering Student
                         </p>
@@ -46,7 +55,7 @@ const copyEmail = async () => {
                     </div>
 
                     <!-- Description -->
-                    <div class="mt-6 md:mt-8">
+                    <div class="mt-6 md:mt-8" :class="['transition-all duration-1000 delay-200', show ? 'opacity-100 translate-x-0':'opacity-0 translate-x-[200%]']">
                         <p class="text-base sm:text-lg md:text-xl text-gray-500">
                             Experienced in building full-stack web applications
                         </p>

@@ -5,7 +5,10 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+import Loading from '~/components/loading.vue'
+import { usePageLoading } from '~/composable/useLoading'
 
+const {loading, done} = usePageLoading()
 
 
 
@@ -17,10 +20,13 @@ const project = computed(() =>
     projectStore.getProjectById(route.params.id)
 )
 
+onMounted(() => {
+    done()
+})
 </script>
 
 <template>
-
+    <Loading v-if="loading" /> 
     <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mt-20 items-center mb-10">
             <div class="flex items-center text-2xl sm:text-3xl">
